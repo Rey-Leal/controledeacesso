@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MasterPage</title>
+    <link href="css/Estilos.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/infoQmais.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="topo">
+            Metodologias Ágeis de Desenvolvimento
+            <div class="topoUser">
+                <asp:Panel ID="pnlUsuario" runat="server" Visible="False">
+                    <asp:Label ID="lbUsuario" runat="server" Text="User"></asp:Label>
+                </asp:Panel>
+            </div>
+        </div>
+        <div class="linkSuperior">
+            <table id="tblGeral" cellpadding="0" cellspacing="0" class="zeroBorder">
+                <tr>
+                    <td>
+                        <a href="Login.aspx">
+                            <div class="botaoSuperior">
+                                Login
+                            </div>
+                        </a>
+                    </td>
+                    <td>
+                        <asp:Panel ID="pnlLogado" runat="server" Visible="false" CssClass="zeroBorder">
+                            <table id="tblLogado" cellpadding="0" class="zeroBorder">
+                                <tr>
+                                    <td>
+                                        <a href="Usuarios.aspx">
+                                            <div class="botaoSuperior">
+                                                Usuários
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="Cadastros.aspx">
+                                            <div class="botaoSuperior">
+                                                Cadastros
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="Configuracoes.aspx">
+                                            <div class="botaoSuperior">
+                                                Configurações
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <asp:Button class="botaoSuperior" Text="Sair" ID="btnSair" runat="server" OnClick="btnSair_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="linkLateral">
+            <p>
+                <a href="Default.aspx">
+                    <div class="botaoSuperior">
+                        Home
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Localizacao.aspx">
+                    <div class="botaoSuperior">
+                        Localização
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="QuemSomos.aspx">
+                    <div class="botaoSuperior">
+                        Quem Somos
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Galeria.aspx">
+                    <div class="botaoSuperior">
+                        Galeria
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Downloads.aspx">
+                    <div class="botaoSuperior">
+                        Downloads
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Noticias.aspx">
+                    <div class="botaoSuperior">
+                        Notícias
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Sugestoes.aspx">
+                    <div class="botaoSuperior">
+                        Sugestões
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Patrocinadores.aspx">
+                    <div class="botaoSuperior">
+                        Patrocinadores
+                    </div>
+                </a>
+            </p>
+            <p>
+                <a href="Contatos.aspx">
+                    <div class="botaoSuperior">
+                        Contatos
+                    </div>
+                </a>
+            </p>
+        </div>
+        <div class="conteudo">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="limpar">
+        </div>
+        <div class="rodape">
+            <img class="logoPequena" alt="infoQ+" src="images/infoQmais.png" />
+        </div>
+    </form>
+</body>
+</html>
